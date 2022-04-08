@@ -18,7 +18,7 @@ const toggleVolume = () => {
     });
 }
 
-const carMovieList = async () => {
+/* const carMovieList = async () => {
     movieListImg.forEach( async (element) => {
         element.addEventListener('click', async (event) => {
             const data = await omdb(event.target.alt);
@@ -26,7 +26,7 @@ const carMovieList = async () => {
         });
     });
     
-}
+} */
 
 const renderMovieList = async () => {
     movieListImg.forEach( async (element, index) => {
@@ -56,6 +56,7 @@ const renderCard = (data) => {
     divCardSpan[0].innerText = `Runtime: ${data.Runtime}`;
     divCardSpan[1].innerText = `Rate: ${data.Ratings[0].Value}`;
     divCardImg.src = data.Poster;
+    document.body.style.overflow = 'hidden';
     shadow.style.opacity = 1;
     shadow.style.zIndex = 9;
     divCard.style.opacity = 1;
@@ -64,6 +65,7 @@ const renderCard = (data) => {
 const removeCard = () => {
     const backButton = document.querySelector('.cardBackButton');
     backButton.addEventListener('click', ()=> {
+        document.body.style.overflow = 'visible';
         divCard.style.opacity = 0;
         shadow.style.opacity = 0;
         shadow.style.zIndex = 0;
@@ -71,9 +73,11 @@ const removeCard = () => {
 }
 
 const searchMovie = async () => {
+    const searchInput = document.querySelector('input');
     const searchInputValue = document.querySelector('input').value;
     if (!searchInputValue) alert('Enter the movie name.');
     const data = await omdb(searchInputValue);
+    searchInput.value = '';
     renderCard(data);
 }
 
@@ -135,7 +139,7 @@ const slider = () => {
     });
 }
 
-carMovieList();
+/* carMovieList(); */
 renderMovieList();
 searchButtonlistener();
 toggleVolume();
