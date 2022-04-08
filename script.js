@@ -8,7 +8,7 @@ const toggleVolume = () => {
     const volume = document.querySelector('.btn-volume-container img');
     const video = document.querySelector('video');
     volume.addEventListener('click', () => {
-        if (volume.src === 'img/icon-volume-off.png') {
+        if (volume.src === 'https://gb1993.github.io/streamingflix/img/icon-volume-off.png') {
             volume.src = './img/icon-volume-on.png';
             video.muted = false;
         } else {
