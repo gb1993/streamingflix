@@ -183,7 +183,7 @@ video{
 
 .movie-list div img:hover{
     transition: 1s;
-    zoom: 120%;
+    zoom: 105%;
 }
 
 #controls3{

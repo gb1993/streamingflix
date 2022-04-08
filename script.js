@@ -18,16 +18,6 @@ const toggleVolume = () => {
     });
 }
 
-/* const carMovieList = async () => {
-    movieListImg.forEach( async (element) => {
-        element.addEventListener('click', async (event) => {
-            const data = await omdb(event.target.alt);
-            renderCard(data);
-        });
-    });
-    
-} */
-
 const renderMovieList = async () => {
     movieListImg.forEach( async (element, index) => {
         const data = await omdb(movieName[index]);
@@ -139,7 +129,6 @@ const slider = () => {
     });
 }
 
-/* carMovieList(); */
 renderMovieList();
 searchButtonlistener();
 toggleVolume();
