@@ -1,8 +1,8 @@
 # streamingflix
 
 <p>Uma página desenvolvida para consolidar conhecimento<p>
-  
-  <ul>Tecnologias Utilizadas
+  <h2>Tecnologias Utilizadas</h2>
+  <ul>
     <li><strong>HTML5</strong> Semântico</li>
     <li><strong>CSS3</strong> </li>
     <li><strong>Tyne</strong> Slider para os sliders da página</li>
